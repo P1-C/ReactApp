@@ -1,17 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import { Navbar, NavbarBrand } from 'reactstrap';
+import Menu from './Components/MenuComponent'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       {/* ReactStrap Navbar */}
-      <Navbar dark color="primary">
+      <Navbar dark color="secondary">
         <div className="container">
-          <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+          <NavbarBrand href="/">
+            <img src={logo} className="App-logo" style={{ height:40}} alt="logo"/>
+            Ristorante Con Fusion</NavbarBrand>
         </div>
       </Navbar>
+      <Menu/>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       
