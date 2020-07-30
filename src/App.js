@@ -13,7 +13,9 @@ class App extends Component {
       dishes: DISHES
     };
   }
+
   render() {
+
     return (
       <div className="App">
        {/* ReactStrap Navbar */}
