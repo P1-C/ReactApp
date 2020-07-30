@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay,CardFooter, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardImg,CardDeck, CardText, CardBody, CardTitle } from 'reactstrap';
 
 class SelectedComponent extends Component {
     constructor(props) {
@@ -22,24 +22,23 @@ class SelectedComponent extends Component {
             console.log(dish.comments);
 
             return (
-                <div className="row">
-                    <div className="col-12 md-5 mt-5">
-                    <Card>
-                    <CardImg width="100%" src={dish.image} alt={dish.name} />
+                <div className="row col-12">
+                    <CardDeck>
+                    <Card className="m-2">
+                    <CardImg top width="100%" src={dish.image} alt={dish.name} />
                         <CardBody>
                             <CardTitle>{dish.name}</CardTitle>
                             <span>{dish.description}</span>
                     </CardBody>
-                    </Card>
-                    </div>
-                    <div className="col-12 md-5 mt-5">
-                    <Card>
+                        </Card>
+                        <Card className="m-2">
                         <h2>Comments</h2>
                         <CardBody>
                         {comments}
                         </CardBody>
                     </Card>
-                    </div>
+                    </CardDeck>
+                   
                 </div>
                 
             )
