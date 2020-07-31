@@ -22,16 +22,17 @@ onDishSelect(dishId) {
 
     return (
       <div className="App">
-       {/* ReactStrap Navbar */}
        <Navbar dark color="secondary">
          <div className="container">
            <NavbarBrand href="/">
              Ristorante Con Fusion</NavbarBrand>
          </div>
        </Navbar>
+            <div className="container">
             <Menu dishes={this.state.dishes}
                 onClick={(dishId)=>this.onDishSelect(dishId)} />
             <DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0]}/>
+            </div>
       </div>
     )
   }
