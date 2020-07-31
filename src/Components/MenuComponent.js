@@ -24,8 +24,10 @@ const Menu = (props) => {
 
     return (
         
+        <div className="container">
             <div className="row mt-4">
                 {menu}
+            </div>
             </div>
     );
 }   
