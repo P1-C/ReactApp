@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { CommentForm } from './CommentFormComponent'
 
 
 function  RenderDish({dish}) {
@@ -43,7 +44,8 @@ function  RenderComments({comments}) {
                                 })}
                             </ul> 
                         </CardText>
-                        </CardBody>
+                        <CommentForm  className="ml-0"/>
+                    </CardBody>
                     </Card>
                    </div>
         )
