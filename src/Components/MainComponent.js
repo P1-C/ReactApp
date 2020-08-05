@@ -19,15 +19,12 @@ const mapStateToProps = state => {
 }
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-  
-  }
 
 
   render() {
 
-    const HomePage = () => {
+    const HomePage = () => { 
+
       return (
         <Home dish={this.props.dishes.filter((dish) => dish.featured)[0]}
           promotion={this.props.promotions.filter((promo) => promo.featured)[0]}

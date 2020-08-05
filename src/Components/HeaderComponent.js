@@ -29,7 +29,7 @@ class Header extends Component {
     }
 
     handleLogin(event) {
-        alert('Username : '+this.username.value+
+        alert( 'Username : '+this.username.value+
                ' Password : '+this.password.value+
                ' Checked : '+this.remember.checked);
         this.toggleModal();
@@ -42,7 +42,7 @@ class Header extends Component {
                 <Navbar dark expand="md" color="secondary">
                     <div className="container">
                         <NavbarBrand className="mr-auto" href="/">
-                            <img src="assets/images/logo.png" height="30" width="41"></img>
+                            <img src="assets/images/logo.png" alt="logo" height="30" width="41"></img>
                         </NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav}/>
                         <Collapse isOpen={this.state.isNavOpen} navbar>

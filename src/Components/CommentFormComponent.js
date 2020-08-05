@@ -27,6 +27,7 @@ export class CommentForm extends Component {
     handleSubmit(values) {
         console.log('Current State is: ' + JSON.stringify(values));
         alert('Current State is: ' + JSON.stringify(values));
+        this.toggleModal();
     }
 
 
@@ -44,7 +45,7 @@ export class CommentForm extends Component {
                 </LocalForm>
 
                 <div className="container">
-                    <Modal isOpen={this.state.isModalOpen}>
+                    <Modal isOpen={this.state.isModalOpen} >
                         <ModalHeader>Submit Comments</ModalHeader>
                         <ModalBody>
                             <div className="m-3">
@@ -101,10 +102,12 @@ export class CommentForm extends Component {
                                             id="comment"
                                             placeholder="Write your comments" />
                                     </Row>
-                                    <Row>
-                                        <Button type="submit" value="submit" color="primary">
+                                    <Row className="form-group">
+                                        <Col>
+                                        <Button type="submit" color="primary">
                                             Submit
-                                </Button>
+                                        </Button>
+                                        </Col>
                                     </Row>
                                 </LocalForm>
                             </div>
