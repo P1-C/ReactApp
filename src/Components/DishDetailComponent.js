@@ -22,7 +22,7 @@ function  RenderDish({dish}) {
         )
     }
 
-function  RenderComments({comments, addComment, dishId}) {
+function  RenderComments({comments, postComment, dishId}) {
         return (
             <div className="col-12 col-md-5 m-2">
                 <Card>
@@ -46,7 +46,7 @@ function  RenderComments({comments, addComment, dishId}) {
                                 })}
                             </ul> 
                         </CardText>
-                        <CommentForm className="ml-0" dishId={dishId} addComment={addComment}/>
+                        <CommentForm className="ml-0" dishId={dishId} postComment={postComment}/>
                     </CardBody>
                     </Card>
                    </div>
@@ -86,7 +86,7 @@ const DishDetail = (props) => {
                 </div>
                 <RenderDish dish={props.dish} />
                     <RenderComments comments={props.comments}
-                        addComment={props.addComment}
+                        postComment={props.postComment}
                         dishId={props.dish.id}/>
                 </div>
                 </div>
